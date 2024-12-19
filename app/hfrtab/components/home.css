@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+
+.fontPoppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fontBebas {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.fontNoto {
+    font-family: 'Noto Serif Devanagari', sans-serif;
+}
+
+.fontKalnia {
+    font-family: 'Kalnia', serif;
+}
+
+.fontArya {
+    font-family: 'Arya', sans-serif;
+}
+
+.fontRighteous {
+    font-family: "Righteous", sans-serif;
+}
+
+.fontJosefin {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.fontMaamli {
+    font-family: "Ga Maamli", sans-serif;
+}
+
+
+body {
+    background: black;
+    font-family: 'Noto Serif Devanagari', sans-serif;
+}
+
+
+.header_back_hfrtab {
+    background-image: url("https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/9fe6d4b5-5c2e-4d8b-0f90-867ae531e500/public");
+    background-size: cover;
+}
+
+
+
+.performance_issue_bg {
+    background-image: url("https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/c81e71bc-e130-44cb-5e2e-7396c298c200/public");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.bg_primium {
+    background-image: url("https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/f23ae79e-8d43-4b07-c587-a835f2025b00/public");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title_shaddow {
+    text-shadow: 2px 2px 2px rgba(270, 199, 130, 1);
+
+
+}
+
+.am_bg {
+    background-image: url("https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/bbd54a8e-4e0a-4345-ec4e-763d55998400/public");
+    background-size: cover;
+}
+
+.box_shaddow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form_shaddow {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.clippath_confidence {
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+
+}
+
+
+.clippath_confidence_1 {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+
+}

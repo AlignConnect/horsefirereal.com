@@ -1,0 +1,485 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+
+
+.fontNoto {
+  font-family: 'Noto Serif Devanagari', sans-serif;
+}
+
+.fontPoppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.fontAnton {
+  font-family: "Anton", sans-serif;
+}
+
+.fontFjord {
+  font-family: "Fjord One", serif;
+}
+
+.fontBebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+.li_style {
+  text-align: start;
+  font-size: 19px;
+  margin: 11px auto;
+  margin: 15px auto;
+  list-style: none;
+  color: white;
+}
+
+
+.li_style::before {
+  content: '\2716';
+  background-color: #fa0204;
+  font-weight: 900;
+  padding: 2px 9px;
+  border-radius: 50px 50px 50px 50px;
+  margin-right: 6px;
+  box-shadow: 0px 6px 5px #5d0101 inset, 0px -6px 5px #5d0101 inset;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.tt {
+  text-align: center;
+  width: 100%;
+  transition: 0.7s ease-in;
+  bottom: 0%;
+}
+
+.xx {
+  bottom: -25%;
+  text-align: center;
+  width: 100%;
+  transition: 0.7s ease;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.fingImg11 {
+  width: fit-content;
+  transform: scaleX(-1);
+}
+
+.OrderNowPopAmaFlip {
+  animation: zoominzoomoutama 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  display: inline-grid;
+}
+
+.fingImg {
+  width: fit-content;
+}
+
+
+.purchaseProduct {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+  overflow: hidden;
+  background: linear-gradient(to right, red, red 50%, black 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  animation: flipGif 4s ease-in infinite;
+  text-align: center;
+}
+
+.purchaseProductw {
+
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(to right, red, red 50%, white 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  animation: flipGifss 4s ease-in infinite;
+  text-align: center;
+
+}
+
+
+.purchaseProductw__ {
+
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(to right, red, red 50%, green 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  animation: flipGifss___ 4s ease-in infinite;
+  text-align: center;
+
+}
+
+
+@keyframes flipGif {
+  0% {
+    background-position: 100%
+  }
+
+  100% {
+    background-position: 0%
+  }
+}
+
+@keyframes flipGifss {
+  0% {
+    background-position: 100%
+  }
+
+  100% {
+    background-position: 0%
+  }
+}
+
+@keyframes flipGifss___ {
+  0% {
+    background-position: 100%
+  }
+
+  50% {
+    background-position: 50%
+  }
+
+  100% {
+    background-position: 100%
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .purchaseProduct {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width:768px) {
+
+
+  .buytrusted {
+    margin: 0rem;
+    padding: 1rem 0.7rem;
+  }
+
+  .ptoductSubTitle {
+    font-size: 1.1rem !important;
+  }
+
+  .webtrust {
+    font-size: 1.1rem !important;
+  }
+
+  .webicon {
+    width: 3rem;
+  }
+
+  .paraFlipAma {
+    font-size: 1.1rem !important;
+  }
+
+  .fingImg {
+    width: 20%;
+  }
+
+  .fingImg11 {
+    width: 20%;
+  }
+
+}
+
+
+
+
+
+/* VideoPlayer.module.css */
+.youtubeVideo {
+  position: relative;
+}
+
+.youtubeVideo .ytp-title {
+  display: none !important;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.pop_imagehfv {
+  animation: zoom-in-zoom-out 1.2s cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+}
+
+.pop_imagehfv___ {
+  animation: zoom-in-zoom-out 1.2s cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.8, 0.8);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1, 1);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(0.8, 0.8);
+    opacity: 1;
+  }
+}
+
+.buttoncu {
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-radius: 16px;
+  border: none;
+  padding: 1px;
+  background: radial-gradient(circle 80px at 80% -10%, #01bc78, #181b1b);
+  position: relative;
+}
+.buttoncu::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1cu {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #01bc78,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.innercu {
+  padding: 7px 25px;
+  border-radius: 14px;
+  color: #01bc78;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.innercu::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+  position: absolute;
+}
+
+.box-ah { 
+  background-position:  0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+  background-image:
+      repeating-linear-gradient(0deg, white, white 2px, transparent 2px, transparent 40px),
+      repeating-linear-gradient(90deg, white, white 2px, transparent 2px, transparent 40px),
+      repeating-linear-gradient(180deg, white, white 2px, transparent 2px, transparent 40px),
+      repeating-linear-gradient(270deg, white, white 2px, transparent 2px, transparent 40px) 
+  ;
+  background-size: 1px calc(100% + 40px), calc(100% + 40px) 1px, 1px calc(100% + 40px) , calc(100% + 40px) 1px;
+  animation: boxBorderAnimation 1s infinite linear;
+
+}
+@keyframes boxBorderAnimation {
+    from { background-position:  0 0, -40px 0, 100% -40px, 0 100%; }
+    to { background-position:  0 -40px, 0 0, 100% 0, -40px 100%; }
+}
+
+.buttonparaHead .buttonpara {
+  position: relative;
+  border: 1px solid #fff;
+}
+
+.buttonparaHead .buttonpara::after, .buttonparaHead .buttonpara::before {
+  position: absolute;
+  content: "";
+  transition: .5s;
+   width: calc(50% + 1px);
+  height: calc(50% + 1px);
+  border-color: #2fdf9f;
+}
+
+.buttonparaHead  p::after {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  
+}
+
+.buttonparaHead  p::before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+
+
+
+
+.borderRL{
+  display: block;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.borderRL:before,
+.borderRL:after{
+  position: absolute;
+  content: "";
+  transition: all .25s;
+}
+
+.borderRL:before{
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  width: 10%;
+  height: 33%;
+  left: -10px;
+  bottom: -10px;
+}
+
+.borderRL:after{
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  width: 10%;
+  height: 33%;
+  top: -10px;
+  right: -10px;
+}
+
+.borderRL:hover:before{
+  width: 112%;
+  height: 140%;
+}
+
+.borderRL:hover:after{
+  width: 112%;
+  height: 140%;
+}
+
+
+
