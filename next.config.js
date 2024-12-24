@@ -149,6 +149,10 @@ const nextConfig = {
         NEXT_APP_URL_HFRHT: 'https://horsefirereal.com/hfrht',
         NEXT_APP_API_KEY_HFRHT: 'AdaVWBFtpRaKYrBNbybvXiUjveNpAKfYLqLDUwOCvOSpxasLWt',
 
+        NEXT_APP_URL_HFRAI: 'https://horsefirereal.com/hfrai',
+        NEXT_APP_API_KEY_HFRAI: 'XTZdgKPOtppgyijCgVXOORMNUvHiPexFxcdTSnJaKOvCuQkXfY',
+
+
 
     },
     experimental: {

@@ -379,6 +379,13 @@ const BottomHandler = () => {
           key: process.env.NEXT_APP_API_KEY_HFRHT,
         });
 
+
+      case "/hfrai":
+        return setAp({
+          api: process.env.NEXT_APP_URL_HFRAI,
+          key: process.env.NEXT_APP_API_KEY_HFRAI,
+        });
+
       default:
         return setAp({
           api: process.env.NEXT_APP_URL,
