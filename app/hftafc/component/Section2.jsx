@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import React from 'react'
 import { TiArrowRightThick } from 'react-icons/ti'
 
-const FlipAmazon = dynamic(() => import('./FlipAmazon'));
+const FlipAmazon = dynamic(() => import('./OrderNow'));
 
 const Section2 = () => {
     return (
@@ -137,11 +137,14 @@ const Section2 = () => {
                 </div>
 
 
-                <FlipAmazon />
+
 
             </div>
+            
 
-
+            <div className='my-2'>
+                <FlipAmazon />
+            </div>
 
 
             <div className='bg-black'>
@@ -167,7 +170,7 @@ const Section2 = () => {
 
                             <div className='bg-[#fff116] flex items-center px-2 justify-center gap-5'>
                                 <p className='font-bold text-[15px] sm:text-xl py-5'>WE HAVE SOLUTION FOR YOUR PROBLEMS</p>
-                                <a className='rounded-full bg-black py-2 px- 5 block text-center sm:px-10 min-w-[100px] text-xl sm:text-2xl text-white fontAnton' href='#buynow'>BUY NOW</a>
+                                <a className='rounded-full bg-black py-2 px- 5 block text-center sm:px-10 min-w-[100px] text-xl sm:text-2xl text-white fontAnton' href='#form'>BUY NOW</a>
                             </div>
                         </div>
 

@@ -10,7 +10,7 @@ const Load = dynamic(() => import("@/app/commonUse/loader/FormLoader"), {
     loading: () => <p>df</p>
 });
 
-const Fliama = dynamic(() => import('@/app/hftafc/component/FlipAmazon'));
+const Fliama = dynamic(() => import('@/app/hftafc/component/OrderNow'));
 
 const AmaFlipDialog = dynamic(() => import('@/app/commonUse/AmaFlipDialog/AmaFlipDialog'), {
     loading: () => <p>load</p>
