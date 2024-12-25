@@ -12,7 +12,7 @@ const Section3 = dynamic(() => import('@/app/hftafc/component/Section3'))
 const CoUse = dynamic(() => import('@/app/hftafc/component/most_selling_3'))
 
 
-const Review = dynamic(() => import('@/app/hf71/components/CustomerReview'))
+const Review = dynamic(() => import('@/app/hft71e/components/CustomerReview'))
 
 const Footer = dynamic(() => import('@/app/commonUse/Footer'))
 

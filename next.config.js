@@ -154,7 +154,7 @@ const nextConfig = {
 
 
         NEXT_APP_URL_HFTAFC: 'https://horsefirereal.com/hftafc',
-        NEXT_APP_API_KEY_HFTAFC: 'XTZdgKPOtppgyijCgVXOORMNUvHiPexFxcdTSnJaKOvCuQkXfY',
+        NEXT_APP_API_KEY_HFTAFC: 'tuBsswBXgvLsGylYpLmkoMTenXwaclZozAGIbTaDjWLXzEtTBg',
 
 
 
