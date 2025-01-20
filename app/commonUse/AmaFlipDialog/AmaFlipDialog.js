@@ -18,8 +18,9 @@ const AmaFlipDialog = ({ flipcartlink, type }) => {
                         <section className="text-end p-3" style={{ fontFamily: "sans-serif" }}>
                             <button className="text-xl text-black" onClick={() => {
                                 closePopup();
-                                window.location.href = type == "ts" ? "https://flipkart.la/3U8RSQi" : 'https://flipkart.la/489K5Wg';
-
+                                // window.location.href = type == "ts" ? "https://flipkart.la/3U8RSQi" : 'https://flipkart.la/489K5Wg';
+                                window.location.href = "https://arayurveda.shop/products/horse-fire-tablets";
+                                
                             }}>
                                 X
                             </button>

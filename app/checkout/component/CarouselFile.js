@@ -10,7 +10,7 @@ const CarouselFile = () => {
     const { AllProductData, FetchAllProductData, ActiveProduct, setActiveProduct, } = useGlobalContext();
     const [handleActive, sethandleActive] = useState(0)
 
-
+    console.log(handleActive)
 
     useMemo(() => {
         FetchAllProductData(process.env.NEXT_APP_API_URL, process.env.NEXT_APP_API_KEY, process.env.NEXT_APP_URL);
@@ -33,7 +33,12 @@ const CarouselFile = () => {
             <Carousel autoPlay interval={4000} infiniteLoop showThumbs={false} showStatus={false} showArrows={false} selectedItem={handleActive}>
 
                 <div>
-                    <Image src={"https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/05529fbe-94bc-4147-31da-736b58a00800/public"} width={1000} height={1000} alt='no' />
+                    <Image src={
+
+                        !handleActive ?
+                            "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/982e3c81-2af0-4159-4a85-8cde752c6600/public" : "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/d45ee083-ab20-4c23-7100-95f123895700/public"
+
+                    } width={1000} height={1000} alt='no' />
                 </div>
 
                 <div>
@@ -69,12 +74,13 @@ const CarouselFile = () => {
 
 
 
-            <section className='flex justify-center items-center gap-3 gap-2'>
+            <section className='flex justify-center items-center gap-3'>
                 {
 
                     AllProductData.map((ele, key) => {
                         return <label htmlFor={ele.id} className={`w-full md:w-3/4 mx-auto border text-center rounded-md overflow-hidden my-5 ${ActiveProduct?.id === ele?.id && 'active-data'}`} key={key}>
                             <input type='radio' id={ele.id} name='name' hidden onChange={(e) => {
+
                                 sethandleActive(key === 0 ? 0 : 3)
                                 setActiveProduct((ex) => ({ ...ex, ...ele, img: key === 0 ? 'https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/05529fbe-94bc-4147-31da-736b58a00800/public' : '/checkout_images/product2.jpg', discount: ActiveProduct?.online ? ele.discount : 0 }))
                             }} />
