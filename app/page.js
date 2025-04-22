@@ -1,70 +1,72 @@
-"use client";
-// import Loading from './commonUse/loader/Loading';
-import dynamic from 'next/dynamic';
-import './components/home.css'
-import { useEffect } from 'react';
+"use client"
+import dynamic from 'next/dynamic'
+import { Noto_Serif_Devanagari } from 'next/font/google'
+import React from 'react'
+import { useEffect } from 'react'
+import './components/main.css'
 
-const Hftpro = dynamic(() => import("./components/Hftpro"), {
-  loading: () => <p>Loading...</p>,
-});
-const DynamicHowitWork = dynamic(() => import("./components/HowitWork"), {
-  loading: () => <p>Loading...</p>,
-});
-
-const DynamicHeroSection = dynamic(() => import("./components/HeroSection"), {
-  loading: () => <p>Loading...</p>,
-});
-const DynamicSection2 = dynamic(() => import("./components/Section2"), {
-  loading: () => <p>Loading...</p>,
-});
-const DynamicSection3 = dynamic(() => import("./components/Section3"), {
-  loading: () => <p>Loading...</p>,
-});
-const DynamicSection4 = dynamic(() => import("./components/Section4"), {
-  loading: () => <p>Loading...</p>,
-});
-const DynamicSection5 = dynamic(() => import("./components/Section5"), {
-  loading: () => <p>Loading...</p>,
-});
-const DynamicSection6 = dynamic(() => import("./components/Section6"), {
-  loading: () => <p>Loading...</p>,
-});
-const Understanding = dynamic(() => import("./components/Understanding"), {
-  loading: () => <p>Loading...</p>,
-});
-const Footer = dynamic(() => import("./components/Footer"), {
-  loading: () => <p>Loading...</p>,
-});
-const FooterPopup = dynamic(() => import("@/app/commonUse/bottompopup/BottomHandler"), {
-  loading: () => <p>Loading...</p>,
-});
+const Newheader = dynamic(() => {
+  return import("./components/newComponents/Header")
+})
 
 
-export default function Home() {
+const Section1 = dynamic(() => {
+  return import("./components/newComponents/Section1")
+})
+
+const Section2 = dynamic(() => {
+  return import("./components/newComponents/Section2")
+})
+
+
+const ReviewSection = dynamic(() => {
+  return import('@/app/ahf/components/CustomerReview')
+})
+
+
+
+const BottomPopup = dynamic(() => {
+  return import("./components/newComponents/BottomPopup")
+})
+
+
+
+const Footer = dynamic(() => import('@/app/commonUse/Footer'))
+
+const noto = Noto_Serif_Devanagari({
+  subsets: ["devanagari"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+const page = () => {
 
 
   useEffect(() => {
-    localStorage.setItem("PATH_KEY", "/");
-  }, []);
 
+    localStorage.setItem("PATH_KEY", "/")
+    localStorage.setItem("PATH", "/")
+
+  }, [])
 
 
   return (
+    <main className={`bg-white fontNoto`}>
+      <title>Horse Fire Tablet</title>
+      <section className="sm:w-[70%] fontNoto mx-auto  text-black text-[1.1rem] sm:text-xl">
 
-    <section className='mb-[5.1rem] sm:mb-0 fontNoto'>
-      <DynamicHeroSection />
-      <DynamicSection2 />
-      <DynamicSection3 />
-      <DynamicSection4 />
-      <Hftpro />
-      <DynamicSection5 />
-      <DynamicSection6 />
-      <DynamicHowitWork />
-      <Hftpro />
-      <Understanding />
-      <Footer />
-      <FooterPopup />
-    </section>
+        <Newheader />
+        <Section1 />
+        <Section2 />
+        <ReviewSection />
+        <Footer />
 
+        <div className='pb-7'>
+          <BottomPopup />
+        </div>
+
+      </section>
+    </main>
   )
 }
+
+export default page

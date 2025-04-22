@@ -2,7 +2,23 @@
 const nextConfig = {
     env: {
 
+
         NEXT_APP_API_URL: 'https://api.brahmikalp.com/api/',
+
+        // NEXT_APP_API_URL_SHOPIFY: "https://shopifyapi.plantifygarden.in",
+        NEXT_APP_API_URL_SHOPIFY: "https://webapi.brahmikalp.com",
+
+
+
+        SHOPIFY_GENERATE_TOKEN:
+            "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9waWZ5YWNjZXNzdG9rZW4iOiJzaHBhdF8wMDg2MGQ3ZDg5YjlhM2NhOTExMmI3MGQ3MGJmNWZmZiIsInNob3BpZnl1cmwiOiJodHRwczovLzZlMTJmNy04ZS5teXNob3BpZnkuY29tIiwiaWF0IjoxNzI1NTI5Mjc3fQ.F098pecX4aU-4jqgrszxR5gU7ac2eCAbxVoBX_xZCB_6qW5G0tHGhOgJPLzYu8J757DJtFEsA6iP90XJ4zMHnSAAJ8Uww2PUqBs3TgruHLHQNORkw78aEjAHN9EEDPg5A9tQlJXcyv7N7ws0u1A5rgNyeJZ8jmi_3t4raPVQi_GjkXW1UVu9WFpc131OWMr0N75fU4yFo5OH6N_vWHzO657tDFzo18lLiLa82_4ZUBaIEWk6JO4KhniIbSaNeTM1XJoYHz6CEyAV9gxnTHKqw2SBHsyTWwgK-gTqDQ895pVWaJQ55E0zJfAI5yeI3WPG0gOijHi1exUFEpSHwA_Sow",
+
+
+
+
+
+
+
 
         //main env
         NEXT_APP_URL: 'https://horsefirereal.com',
@@ -156,7 +172,26 @@ const nextConfig = {
         NEXT_APP_URL_HFTAFC: 'https://horsefirereal.com/hftafc',
         NEXT_APP_API_KEY_HFTAFC: 'tuBsswBXgvLsGylYpLmkoMTenXwaclZozAGIbTaDjWLXzEtTBg',
 
+        // https://horsefirereal.com/hftjnt
+        NEXT_APP_URL_HFO: 'https://horsefirereal.com/hfo',
+        NEXT_APP_API_KEY_HFO: 'UMywqUduhITkghEiAvpXDtrLpFlZWxwRDZVrQcouEwSDWnghhd',
 
+
+        NEXT_APP_URL_HFTJNT: 'https://horsefirereal.com/hftjnt',
+        NEXT_APP_API_KEY_HFTJNT: 'EyDJlNLQpwbehLXITqjLywlAhCYNKXgRNElVgmIdFYzBZrgvmo',
+
+        NEXT_APP_URL_HFTNXT: 'https://horsefirereal.com/hftnxt',
+        NEXT_APP_API_KEY_HFTNXT: 'ZeQRFMSoraYhtoanEblMnyWQOqjymNhWHLbBNagJDAOImmUUXA',
+
+        NEXT_APP_URL_HFTVHT: 'https://horsefirereal.com/hftvht',
+        NEXT_APP_API_KEY_HFTVHT: 'esCfdiEPBokQsRGLsnqbcGmbaETuiMIIEjSFNrlpwdJKvhxQyt',
+
+
+        NEXT_APP_URL_HFTV: 'https://horsefirereal.com/hftv',
+        NEXT_APP_API_KEY_HFTV: 'vHYVklsbLUHIXDNVAkTWziXVgJMfXJJMlloIgLztmeiBTvHAVd',
+
+        NEXT_APP_URL_HFRENG: 'https://horsefirereal.com/hfreng',
+        NEXT_APP_API_KEY_HFRENG: 'QtxpAlobwewRAnVMjzLYdmEmTKpkXWeLVtVjJpuCBPXQHJJfdu',
 
     },
     experimental: {
@@ -203,3 +238,4 @@ const nextConfig = {
 }
 
 module.exports = nextConfig;
+

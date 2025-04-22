@@ -2,7 +2,7 @@ import axios from "axios";
 import Joi from "joi";
 
 export class CheckoutFile {
-  constructor() {}
+  constructor() { }
 
   static getCheckOutData = async ({
     APP_API_URL,
@@ -20,9 +20,12 @@ export class CheckoutFile {
       },
     });
 
-    if (!res.ok) {
-      throw new Error("Interal Server Error Please Try out After some Time");
-    }
+    // if (!res.ok) {
+    //   throw new Error("Interal Server Error Please Try out After some Time");
+    // }
+
+
+    console.log(res)
 
     return await res.json();
   };
@@ -37,6 +40,7 @@ export class CheckoutFile {
         .required()
         .messages({ "string.regex": "Please Fill Correct Value" }),
       email: Joi.string().allow("").default(""),
+      // email: Joi.string().required(),
       pincode: Joi.number().required(),
       city: Joi.string().required(),
       state: Joi.string().required(),
@@ -79,7 +83,7 @@ export class CheckoutFile {
   //this is for create order in brahmikalp
 
   static createOrder = async (formdata) => {
-    console.log(formdata);
+    // console.log(formdata);
     const orderData = {
       customer_name: formdata.name,
       customer_phone: String(formdata.phone),
@@ -95,6 +99,7 @@ export class CheckoutFile {
       discount: formdata.discount,
       totalPrice: formdata.price - formdata.discount,
       payment_mode: formdata.online ? "online" : "cod",
+      razorpay_orderid: formdata.uniID,
       form_id: null,
     };
 
@@ -102,7 +107,7 @@ export class CheckoutFile {
       const { get_next_url, get_next_key } = handleCheckApiKey();
 
       const url =
-        process.env.NEXT_APP_API_URL + "order/create?api_key=" + get_next_key;
+        process.env.NEXT_APP_API_URL + "order/create/?api_key=" + get_next_key;
 
       const response = await axios.post(url, orderData, {
         headers: {
@@ -111,7 +116,7 @@ export class CheckoutFile {
         },
       });
 
-      console.log(response);
+      // console.log(response);
       return response;
     } catch (error) {
       console.log("error: ", error);
@@ -120,7 +125,7 @@ export class CheckoutFile {
   };
 
   static PaymentInitial = (paymentdata, setalertVerify) => {
-    console.log("paymentdata", paymentdata);
+    // console.log("paymentdata", paymentdata);
 
     const options = {
       key: paymentdata.razorpay_key_id,
@@ -146,7 +151,7 @@ export class CheckoutFile {
             response,
             { headers: { web_site_url: get_next_url } }
           );
-          console.log("data: ", data);
+          // console.log("data: ", data);
 
           if (data.message === "Payment verified successfully") {
             console.log(
@@ -508,12 +513,38 @@ export const handleCheckApiKey = () => {
         get_next_key = process.env.NEXT_APP_API_KEY_HFRAI;
         break;
 
-        // hftafc
-      
-        case "/hftafc":
-          get_next_url = process.env.NEXT_APP_URL_HFTAFC;
-          get_next_key = process.env.NEXT_APP_API_KEY_HFTAFC;
+      // hftafc
+
+      case "/hftafc":
+        get_next_url = process.env.NEXT_APP_URL_HFTAFC;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFTAFC;
+        break;
+
+
+      case "/hftjnt":
+        get_next_url = process.env.NEXT_APP_URL_HFTJNT;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFTJNT;
+        break;
+
+
+      case "/hftnxt":
+        get_next_url = process.env.NEXT_APP_URL_HFTNXT;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFTNXT;
+        break;
+
+
+      case "/hftv":
+        get_next_url = process.env.NEXT_APP_URL_HFTV;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFTV;
+        break;
+
+
+        case "/hfreng":
+          get_next_url = process.env.NEXT_APP_URL_HFRENG;
+          get_next_key = process.env.NEXT_APP_API_KEY_HFRENG;
           break;
+  
+  
 
       default:
         get_next_url = process.env.NEXT_APP_URL;

@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { GlobalContextProvider } from "./statemanage/context";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,15 +11,88 @@ export const metadata = {
   description: "Horse Fire Tablet",
 };
 
+const Wrapper = dynamic(() => import('@/app/wrapper/page'))
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
+      <head>
+
+        <input type="hidden" value="arayurveda.shop" id="sellerDomain" />
+
+
+        <script
+          src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shopify.js"
+          defer
+        ></script>
+
+        <link
+          rel="stylesheet"
+          href="https://fastrr-boost-ui.pickrr.com/assets/styles/shopify.css"
+        ></link>
+      </head>
+
       <link
         rel="icon"
         href={
           "https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/30df694e-2a8a-423e-0bbc-e76cb744aa00/public"
         }
       />
+
+
+
+
+      {/* <!-- Criteo Loader File --> */}
+      <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=119705" async={true}></script>
+      {/* <!-- END Criteo Loader File --> */}
+
+
+      {/* <!-- Criteo Homepage Tag --> */}
+
+
+      <Script strategy="lazyOnload" type="text/javascript">
+        {`
+
+            window.criteo_q = window.criteo_q || [];
+  var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+  window.criteo_q.push(
+    { event: "setAccount", account: 119705 },
+    { event: "setEmail", email: "##Email Address of User##" },
+    { event: "setSiteType", type: deviceType},
+    { event: "viewHome" }
+  );
+
+
+          `}
+      </Script>
+
+
+
+
+
+      <Script strategy="lazyOnload" type="text/javascript">
+        {`
+
+            window.criteo_q = window.criteo_q || [];
+  var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+  window.criteo_q.push(
+    { event: "setAccount", account: 119705 },
+    { event: "setEmail", email: "##Email Address of User##" },
+    { event: "setSiteType", type: deviceType},
+    { event: "viewHome" }
+  );
+
+
+          `}
+      </Script>
+
+
+
+
+
+
+
 
       <Script
         strategy="lazyOnload"
@@ -54,6 +128,11 @@ export default function RootLayout({ children }) {
       </Script>
 
       <body className={inter.className}>
+
+
+
+
+
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-W7N2XRZM"
           height="0"
@@ -69,7 +148,9 @@ export default function RootLayout({ children }) {
         ></script>
         {/* END ExoClick Goal Tag | Website Interation */}
 
-        <GlobalContextProvider>{children}</GlobalContextProvider>
+        <GlobalContextProvider>
+          <Wrapper>{children}</Wrapper>
+        </GlobalContextProvider>
       </body>
     </html>
   );

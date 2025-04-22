@@ -13,13 +13,15 @@ const Footer = dynamic(() => import("./components/footer"), {
 
 const page = () => {
     return (
-        <section className='max-w-xl mx-auto'>
+        <div className='bg-black min-h-screen'>
+            <section className='max-w-xl mx-auto relative -top-2'>
 
-            <Header />
+                <Header />
 
-            <Footer />
+                <Footer />
 
-        </section>
+            </section>
+        </div>
     )
 }
 

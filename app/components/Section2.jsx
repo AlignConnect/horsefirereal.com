@@ -33,10 +33,10 @@ const Section2 = () => {
       formdata.append("name", getCustomData.name)
       formdata.append("phone", getCustomData.phone)
       formdata.append("address", getCustomData.address)
-      formdata.append("post", "Horsefirereal.com")
+      formdata.append("post", "Horsefirereal.com/main")
       formdata.append("ip", check ? check : "")
       formdata.append("checkout_toogle", checkoutDetail.checkoutChecked)
-      formdata.append("blog_url", process.env.NEXT_APP_URL ?? "horsefirereal.com")
+      formdata.append("blog_url", "horsefirereal.com/main")
 
       const searchParamss_krt = searchParams.get("krt");
       const searchParamss_krttracker = searchParams.get("krttracker");

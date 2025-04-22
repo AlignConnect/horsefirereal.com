@@ -13,12 +13,16 @@ export const CustomerDataValue = [
         label: "फोन नंबर लिखिए",
         icon: "+91",
         inputValue: {
-            type: "text",
+            type: "tel",
             name: "phone",
             maxLength: 10,
-            minLength: 10
+            pattern: "\\d{10}",
+            inputMode: "numeric",
+            onInput: (e) => {
+                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+            }
         }
-    },
+    }
     // {
     //     label: "Address",
     //     icon: "+91",

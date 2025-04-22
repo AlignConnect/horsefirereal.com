@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+
+
+.fontNoto {
+    font-family: 'Noto Serif Devanagari', sans-serif !important;
+}
+
+.fontPoppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppinsFont {
+    font-family: 'Poppins', sans-serif !important;
+}
