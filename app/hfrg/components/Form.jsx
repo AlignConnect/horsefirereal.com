@@ -1,6 +1,6 @@
 "use client";
 import { useGlobalContext } from "@/app/statemanage/context";
-import { CustomerDataValidator, CustomerDataValue } from "@/app/hftnxteg/component/FormDataValidation";
+import { CustomerDataValidator, CustomerDataValue } from "@/app/commonUse/FormDataValidation";
 import axios from 'axios';
 import { useSearchParams } from "next/navigation";
 import { MdOutlineSupportAgent } from "react-icons/md";
@@ -44,20 +44,20 @@ const Form = () => {
             formdata.append("name", getCustomData.name)
             formdata.append("phone", getCustomData.phone)
             formdata.append("address", getCustomData.address)
-            formdata.append("post", "Horsefirereal.com/HFRENG")
+            formdata.append("post", "Horsefirereal.com/HFRG")
             formdata.append("ip", check ? check : "")
             formdata.append("checkout_toogle", checkoutDetail.checkoutChecked)
-            formdata.append("blog_url", process.env.NEXT_APP_URL_HFRENG ?? "Horsefirereal.com/hfreng")
+            formdata.append("blog_url", process.env.NEXT_APP_URL_HFRG ?? "Horsefirereal.com/HFRG")
 
-            // let tracker = searchParams.get("krt-tracker");
-            const searchParamss_krt = searchParams.get("krt");
-            const searchParamss_krttracker = searchParams.get("krttracker");
+           // let tracker = searchParams.get("krt-tracker");
+           const searchParamss_krt = searchParams.get("krt");
+           const searchParamss_krttracker = searchParams.get("krttracker");
 
-            searchParamss_krttracker && formdata.append('conversions_tracking', searchParamss_krttracker);
-            searchParamss_krt && formdata.append("conversions", searchParamss_krt);
+           searchParamss_krttracker && formdata.append('conversions_tracking', searchParamss_krttracker);
+           searchParamss_krt && formdata.append("conversions", searchParamss_krt);
 
-            const searchParamss_hftevadev = searchParams.get("hftevadev");
-            searchParamss_hftevadev && formdata.append("hftevadev", searchParamss_hftevadev);
+           const searchParamss_hftevadev = searchParams.get("hftevadev");
+           searchParamss_hftevadev && formdata.append("hftevadev", searchParamss_hftevadev);
 
             try {
                 const form = await fetch(`https://horsefirereal.com/submitdata.php`, { body: formdata, method: "POST" })
@@ -86,7 +86,7 @@ const Form = () => {
 
 
     return (
-        <div id="form" >
+        <div id="form" className={noto.className}>
 
             {
                 loading && <FormLoader />
@@ -97,14 +97,14 @@ const Form = () => {
 
                 >
                     <div className=" pb-1 flex  bg-white pt-2 mt-10"  >
-                        <div className=' flex gap-1 items-center font-extrabold text-lg md:text-2xl px-2 text-red-600'>
+                        <div className='fontNoto flex gap-1 items-center font-extrabold text-lg md:text-2xl px-2 text-red-600'>
                             सूचना:
                         </div>
-                        <marquee className='fontPoppins text-md md:text-xl text-black' direction="left">Due to rising popularity of <strong>Horse Fire Tablets</strong>, some fake sellers have entered the market. Please make sure to buy the product under the AR Ayurveda brand only!</marquee >
+                        <marquee className='fontNoto text-lg md:text-xl text-black' direction="left">हॉर्सफायर के बढ़ते लोकप्रियता को देखते हुए आजकल मार्केट में नकली प्रोडक्ट आ गए है तो ध्यानपूर्वक <span className="fontPoppins text-red-600 ">AR Ayurveda</span> ब्रांड देखकर ही आर्डर करें!</marquee >
                     </div>
                     <div className="py-6 md:py-12 px-3 ">
 
-                        <div className=" text-xl md:text-3xl text-white text-center fw-bold mb-6 md:mb-6 font-extrabold">Fill the form for free consultation with expert doctors over call!</div>
+                        <h1 className="fontNoto text-2xl md:text-3xl text-white text-center fw-bold mb-6 md:mb-6 font-extrabold">कॉल पर विशेषज्ञ डॉक्टरों से मुफ्त सलाह के लिए फॉर्म भरें!</h1>
                         <div className="">
                             <div className="" id='form'>
                                 <div className="form_shaddow " id='formcallhide'>

@@ -2,7 +2,7 @@ import axios from "axios";
 import Joi from "joi";
 
 export class CheckoutFile {
-  constructor() { }
+  constructor() {}
 
   static getCheckOutData = async ({
     APP_API_URL,
@@ -24,8 +24,7 @@ export class CheckoutFile {
     //   throw new Error("Interal Server Error Please Try out After some Time");
     // }
 
-
-    console.log(res)
+    console.log(res);
 
     return await res.json();
   };
@@ -520,31 +519,37 @@ export const handleCheckApiKey = () => {
         get_next_key = process.env.NEXT_APP_API_KEY_HFTAFC;
         break;
 
-
       case "/hftjnt":
         get_next_url = process.env.NEXT_APP_URL_HFTJNT;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTJNT;
         break;
-
 
       case "/hftnxt":
         get_next_url = process.env.NEXT_APP_URL_HFTNXT;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTNXT;
         break;
 
-
       case "/hftv":
         get_next_url = process.env.NEXT_APP_URL_HFTV;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTV;
         break;
 
+      case "/hfreng":
+        get_next_url = process.env.NEXT_APP_URL_HFRENG;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFRENG;
+        break;
 
-        case "/hfreng":
-          get_next_url = process.env.NEXT_APP_URL_HFRENG;
-          get_next_key = process.env.NEXT_APP_API_KEY_HFRENG;
-          break;
-  
-  
+      // HFTNXTEG
+
+      case "/hftnxteg":
+        get_next_url = process.env.NEXT_APP_URL_HFTNXTEG;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFTNXTEG;
+        break;
+
+      case "/hfrg":
+        get_next_url = process.env.NEXT_APP_URL_HFRG;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFRG;
+        break;
 
       default:
         get_next_url = process.env.NEXT_APP_URL;

@@ -17,12 +17,17 @@ const nextConfig = {
 
 
 
-
+        // https://horsefirereal.com/hftnxteg
 
 
         //main env
         NEXT_APP_URL: 'https://horsefirereal.com',
         NEXT_APP_API_KEY: 'FRpFWKZVZKCbjKXDDaxOsnulOhQJoFhcyjCyGJkokZbziYUxAJ',
+
+
+        NEXT_APP_URL_HFTNXTEG: 'https://horsefirereal.com/hftnxteg',
+        NEXT_APP_API_KEY_HFTNXTEG: 'CxMMFuCUjwJvnduzLMetIcBEbHpNMxRpVwdxCHbHTiKSwaocGK',
+
 
         NEXT_APP_URL_AHF: 'https://horsefirereal.com/ahf',
         NEXT_APP_API_KEY_AHF: 'iuOKTWEIZMXSpsbkeuNzJZHHmYvOSNjjYZQNQpjTvsszQwShsN',
@@ -192,6 +197,9 @@ const nextConfig = {
 
         NEXT_APP_URL_HFRENG: 'https://horsefirereal.com/hfreng',
         NEXT_APP_API_KEY_HFRENG: 'QtxpAlobwewRAnVMjzLYdmEmTKpkXWeLVtVjJpuCBPXQHJJfdu',
+
+        NEXT_APP_URL_HFRG: 'https://horsefirereal.com/hfrg',
+        NEXT_APP_API_KEY_HFRG: 'xIXxyqkSubEoxkwTMXZjHuaLiKWWLKkkqABTyuvdhzQqkRfDbJ',
 
     },
     experimental: {
