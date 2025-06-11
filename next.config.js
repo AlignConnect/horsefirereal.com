@@ -201,6 +201,12 @@ const nextConfig = {
         NEXT_APP_URL_HFRG: 'https://horsefirereal.com/hfrg',
         NEXT_APP_API_KEY_HFRG: 'xIXxyqkSubEoxkwTMXZjHuaLiKWWLKkkqABTyuvdhzQqkRfDbJ',
 
+        
+        NEXT_APP_URL_HFTSZ: 'https://horsefirereal.com/hftsz',
+        NEXT_APP_API_KEY_HFTSZ: 'aAsiYeglUXWsJkzACbSqDKkTClKAcWsDFrgxijnTeYWqKfpqcC',
+
+        
+
     },
     experimental: {
         webVitalsAttribution: ['CLS', 'LCP'],

@@ -1,5 +1,10 @@
+import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 
+
+const BenefitSlider = dynamic(() => import('./BenefitSlider'), {
+    loading: () => <p>loading</p>
+});
 
 const Header = () => {
 
@@ -24,7 +29,9 @@ const Header = () => {
                 <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/c9504bbf-327f-45b8-9d8a-44d7ab31ab00/public" alt="" className='w-full p-3' />
 
 
-                <div className="text-left sm:pl-10 pl-3">
+                <BenefitSlider />
+
+                {/* <div className="text-left sm:pl-10 pl-3">
                     {
                         benifits([
                             {
@@ -41,7 +48,7 @@ const Header = () => {
                             }
                         ])
                     }
-                </div>
+                </div> */}
 
 
                 <div className="relative bg-white py-6 flex items-center justify-center sm:my-8 my-6">
@@ -65,7 +72,7 @@ const Header = () => {
                 </div>
 
 
-                <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/d600bdc9-2367-47d0-b63a-b37207408300/public" alt="" className='w-full'/>
+                <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/d600bdc9-2367-47d0-b63a-b37207408300/public" alt="" className='w-full' />
             </div>
         </section>
     );
