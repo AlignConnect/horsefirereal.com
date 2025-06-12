@@ -189,7 +189,7 @@ const nextConfig = {
         NEXT_APP_API_KEY_HFTNXT: 'ZeQRFMSoraYhtoanEblMnyWQOqjymNhWHLbBNagJDAOImmUUXA',
 
         NEXT_APP_URL_HFTVHT: 'https://horsefirereal.com/hftvht',
-        NEXT_APP_API_KEY_HFTVHT: 'esCfdiEPBokQsRGLsnqbcGmbaETuiMIIEjSFNrlpwdJKvhxQyt',
+        NEXT_APP_API_KEY_HFTVHT: 'OfhjPicxVXhCBgFeHzzIzxSFhdVqDXypAjOvjNMuJKmzPRmRFc',
 
 
         NEXT_APP_URL_HFTV: 'https://horsefirereal.com/hftv',
