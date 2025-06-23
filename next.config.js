@@ -205,7 +205,9 @@ const nextConfig = {
         NEXT_APP_URL_HFTSZ: 'https://horsefirereal.com/hftsz',
         NEXT_APP_API_KEY_HFTSZ: 'aAsiYeglUXWsJkzACbSqDKkTClKAcWsDFrgxijnTeYWqKfpqcC',
 
-        
+        NEXT_APP_URL_HFRV1: 'https://horsefirereal.com/hfrv1',
+        NEXT_APP_API_KEY_HFRV1: 'bSPxkqKpFohoyXoABoLtePAFxzXtviSKNTemGhDNBHuoCWCNAL',
+
 
     },
     experimental: {
