@@ -228,19 +228,8 @@ const Header = () => {
                             </div>
 
                             <div className="">
-
-                                {/* <ShiProcket /> */}
-
-                                <div className="">
-
-                                    <div>
-                                        <a href='/checkout' className="bg-green-700 fontJosefin sm:text-xl text-center text-white font-semibold pt-1 pb-1 mt-3 sm:mt-0 px-4 rounded w-3/4 mx-auto sm:px-14">
-                                            BUY NOW
-                                        </a>
-                                    </div>
-
-                                </div>
-
+                                {/* <Button className="min-w-[250px] py-5 bg-green-700">BUY NOW</Button> */}
+                                <ShiProcket />
                             </div>
 
                             <div className="my-5">
